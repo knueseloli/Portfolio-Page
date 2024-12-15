@@ -51,3 +51,5 @@
             margin-top: 20px;
             color: #333;
         }
+
+        #map { height: 300px; width: 500px;z-index:0;}
