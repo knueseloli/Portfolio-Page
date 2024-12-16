@@ -10,37 +10,68 @@
 <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<title>Profilbild Einbettung</title>
-    
-</head>
 <body>
-
-    <div class="profile-container">
-        <img src="Jungfraujoch.jpg" alt="Profilbild">
-        <h2>Olivier Knüsel</h2>
-    </div>
-<body>
-
     <header>
-        <h1>Willkommen auf der Testseite</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#arbeitserfahrung">Arbeitserfahrung</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#funfacts">Funfacts</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h2>Über diese Seite</h2>
-        <p>Dies ist eine einfache Testseite, um grundlegendes HTML und CSS zu demonstrieren.</p>
-        <p>Hier sind einige nützliche Links:</p>
-        <ul>
-            <li><a href="https://www.google.de" target="_blank">Google</a></li>
-            <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
-            <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
-        </ul>
-        <iframe src="https://straubsportcup.ch/1-starkeklasse-24-25/" width="800px" height="500px"></iframe>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-container">
+                <div class="about-text">
+                    <h1>Willkommen!</h1>
+                    <p>Hallo! Mein Name ist [Dein Name]. Ich bin [Beruf/Position] mit einer Leidenschaft für [Themen]. Willkommen auf meiner Portfolio-Seite!</p>
+                </div>
+                <div class="profile-image">
+                    <img src="profilbild.jpg" alt="Profilbild">
+                </div>
+            </div>
+        </section>
+
+        <!-- Arbeitserfahrung Section -->
+        <section id="arbeitserfahrung">
+            <h2>Arbeitserfahrung</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">Aktuelle Position bei [Unternehmen]</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2024</div>
+                    <div class="timeline-content">Vorherige Position bei [Unternehmen]</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2022</div>
+                    <div class="timeline-content">Studium/Weiterbildung an [Institution]</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>Hier kannst du mehr über meine Hobbies erfahren! [Platzhaltertext]</p>
+            <iframe src="https://straubsportcup.ch/1-starkeklasse-24-25/" width="800px" height="500px"></iframe>
         <div id="map"></div>
+        </section>
+
+        <!-- Funfacts Section -->
+        <section id="funfacts">
+            <h2>Funfacts</h2>
+            <p>Hier sind einige lustige Fakten über mich! [Platzhaltertext]</p>
+        </section>
     </main>
 
     <footer>
         <p>© 2024 Olivier Knüsel. Alle Rechte vorbehalten.</p>
     </footer>
-
 </body>
 </html>
