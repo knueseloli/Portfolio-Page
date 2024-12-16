@@ -6,3 +6,19 @@ window.addEventListener("load", (event) =>
           L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19,attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
           L.marker([47.08975551894657, 7.446401887035676]).addTo(map)     .bindPopup('Die Mehrzweckhalle in Messen:<br> Heimat des Turnverein Messen.')     .openPopup();
         });
+
+// Wähle alle Links in der Navigation aus
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Verhindert das Standardspringen
+
+        // Ziel-Element basierend auf dem href-Attribut finden
+        const target = document.querySelector(this.getAttribute('href'));
+
+        // Sanft zu dem Ziel-Element scrollen
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
