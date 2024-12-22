@@ -18,6 +18,12 @@ header {
     justify-content: center; /* Zentriert Inhalte horizontal */
 }
 
+.wave {
+    position: relative;
+    margin-top: -10px; /* Überlappung justieren */
+    z-index: -1;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -53,19 +59,64 @@ section {
 /* Home Section */
 .home-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 20px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .about-text {
-    width: 60%;
+    width: 50%;
+    padding: 20px;
+}
+
+.home-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.home-box {
+    flex: 1;
+    background-color: #004B5A;
+    border: 2px solid #004B5A;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-box h3 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.home-box p {
+    margin: 10px 0 0;
+    color: #ffffff;
+}
+
+.profile-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
 }
 
 .profile-image img {
-    width: 250px;
+    width: 70%;
     height: auto;
-    border-radius: 0;
-    border: none;
+    object-fit: contain;
 }
 
 /* Timeline Styles */

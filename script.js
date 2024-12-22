@@ -22,3 +22,13 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         });
     });
 });
+
+document.querySelectorAll('.home-box').forEach(box => {
+    box.addEventListener('click', function () {
+        const target = document.querySelector(this.getAttribute('data-target'));
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
