@@ -72,6 +72,37 @@ section {
     padding: 20px;
 }
 
+.highlight {
+    font-weight: bold;
+    color: #004B5A;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Tooltip-Stil */
+.highlight::after {
+    content: attr(data-tooltip); /* Tooltip-Text aus dem Attribut */
+    position: absolute;
+    bottom: 120%; /* Über dem Element anzeigen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0; /* Unsichtbar standardmäßig */
+    visibility: hidden; /* Tooltip ist standardmäßig ausgeblendet */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Tooltip beim Hover anzeigen */
+.highlight:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 .home-boxes {
     display: flex;
     flex-direction: column;
