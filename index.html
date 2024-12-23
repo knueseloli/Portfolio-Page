@@ -9,22 +9,23 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
 <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#arbeitserfahrung">Arbeitserfahrung</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#funfacts">Funfacts</a></li>
-            </ul>
-        </nav>
-        <div class="wave">
-            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#D6EBEB" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,240C384,256,480,256,576,240C672,224,768,192,864,170.7C960,149,1056,139,1152,128C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
+        <div class="header-container">
+            <h1 class="header-title">Portfolio</h1>
+            <nav>
+                <ul class="header-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#arbeitserfahrung">Arbeitserfahrung</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#funfacts">Funfacts</a></li>
+                </ul>
+            </nav>
+        </div>    
     </header>
 
     <main>
@@ -32,22 +33,25 @@
         <section id="home">
             <div class="home-container">
                 <div class="about-text">
-                    <h1>Über mich</h1>
-                    <p>Sali! Mein Name ist Olivier Knüsel. Mit Baujahr 1999 bin ich mittlerweile 25 Jahre alt. Aufgewachsen bin ich im idyllischen Messen im Solothurner Limpachtal, 
-                        mittlerweile etwas weiter westlich in Grossaffoltern im Seeland wohnhaft. Beruflich bin ich als <span class="highlight" data-tooltip="Das ist mein Beruf">HR IT-Spezialist</span> bei der PostFinance AG in Bern tätig. 
+                    <h1>Sali!</h1>
+                    <p>Mein Name ist Olivier Knüsel. Mit Baujahr 1999 bin ich mittlerweile 25 Jahre alt. Aufgewachsen bin ich im idyllischen Messen im Solothurner Limpachtal, 
+                        mittlerweile etwas weiter westlich in Grossaffoltern im Seeland wohnhaft. Beruflich bin ich als
+                         <span class="highlight" data-tooltip="Business Analyse, Begleitung von HR-Vorhaben mit IT-Bezug, Schnittstelle zur Enterprise Architektur, technischer Support">HR IT-Spezialist</span>
+                          bei der PostFinance AG in Bern tätig. Abseits von Arbeit und Ausbildung betreibe ich am liebsten Sport, das ist für mich der ideala Ausgleich.
+                           Generell bin ich ein sehr humorvoller, aufgestellter Mensch schätze quality-time mit meinen Kolleg:innen.
                     </p>
                     <div class="home-boxes">
                         <div class="home-box" data-target="#arbeitserfahrung">
                             <h3>Arbeitserfahrung</h3>
-                            <p>Klicke hier, um zu meiner Arbeitserfahrung zu springen.</p>
+                            <p>Hier kannst du dir meinen beruflichen Werdegang sowie meine Ausbildung ansehen.</p>
                         </div>
                         <div class="home-box" data-target="#hobbies">
                             <h3>Hobbies</h3>
-                            <p>Klicke hier, um zu meinen Hobbies zu springen.</p>
+                            <p>Hier findest du mehr über meine Passion, den Sport heraus.</p>
                         </div>
                         <div class="home-box" data-target="#funfacts">
                             <h3>Funfacts</h3>
-                            <p>Klicke hier, um zu meinen Funfacts zu springen.</p>
+                            <p>Einige weitere lustige Infos zu mir verbergen sich hier.</p>
                         </div>
                     </div>
                 </div>
@@ -59,19 +63,33 @@
 
         <!-- Arbeitserfahrung Section -->
         <section id="arbeitserfahrung">
-            <h2>Arbeitserfahrung</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">Aktuelle Position bei [Unternehmen]</div>
+            <div class="arbeit-container">
+                <!-- Linkes Drittel: Timeline -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">Aktuelle Position bei [Unternehmen]</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - 2024</div>
+                        <div class="timeline-content">Vorherige Position bei [Unternehmen]</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018 - 2022</div>
+                        <div class="timeline-content">Studium/Weiterbildung an [Institution]</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2022 - 2024</div>
-                    <div class="timeline-content">Vorherige Position bei [Unternehmen]</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2018 - 2022</div>
-                    <div class="timeline-content">Studium/Weiterbildung an [Institution]</div>
+        
+                <!-- Rechtes Drittel: Fähigkeiten -->
+                <div class="skills">
+                    <h3>Fähigkeiten</h3>
+                    <div class="skills-boxes">
+                        <div class="skill-box">Projektmanagement</div>
+                        <div class="skill-box">Teamführung</div>
+                        <div class="skill-box">IT-Strategie</div>
+                        <div class="skill-box">Kommunikation</div>
+                        <div class="skill-box">Problemlösung</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -93,7 +111,27 @@
     </main>
 
     <footer>
-        <p>© 2024 Olivier Knüsel. Alle Rechte vorbehalten.</p>
+        <div class="footer-container">
+            <!-- Link zu Instagram -->
+            <div class="footer-item">
+                <h3>Folge mir</h3>
+                <a href="https://www.instagram.com/chopfsvorahischnee" target="_blank" class="instagram-link">
+                    <img src="images/Instagram_Icon.png" alt="Instagram Icon">
+                </a>
+            </div>
+    
+            <!-- Mailto-Link -->
+            <div class="footer-item">
+                <h3>Schreibe mir</h3>
+                <a href="mailto:oknsel@yahoo.com" class="mailto-button">Kontakt</a>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="footer-item">
+                <p>© 2024 Olivier Knüsel. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
     </footer>
+    
 </body>
 </html>
