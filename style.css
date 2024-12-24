@@ -72,7 +72,7 @@ main {
 }
 
 section {
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 /* Home Section */
@@ -93,7 +93,7 @@ section {
 
 .highlight {
     font-weight: bold;
-    color: #004B5A;
+    color: #FFCC00;
     cursor: pointer;
     position: relative;
 }
@@ -107,13 +107,16 @@ section {
     transform: translateX(-50%);
     background-color: #004B5A;
     color: white;
-    padding: 5px 10px;
+    padding: 5px 8px; /* Kompaktere Padding-Werte */
     border-radius: 5px;
     font-size: 12px;
-    white-space: nowrap;
+    width: 150px; /* Begrenzte Breite für Zeilenumbruch */
+    white-space: normal; /* Erlaubt Zeilenumbruch */
+    text-align: center; /* Zentriert den Text */
     opacity: 0; /* Unsichtbar standardmäßig */
     visibility: hidden; /* Tooltip ist standardmäßig ausgeblendet */
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Schatten für Tooltip */
 }
 
 /* Tooltip beim Hover anzeigen */
@@ -164,9 +167,17 @@ section {
 }
 
 .profile-image img {
-    width: 70%;
+    width: 55%;
     height: auto;
     object-fit: contain;
+}
+
+#home {
+    margin-bottom: 5px; /* Reduzierter Abstand unterhalb der Home Section */
+}
+
+#arbeitserfahrung {
+    margin-top: 5px; /* Optional: Reduzierter Abstand oberhalb der Arbeitserfahrung Section */
 }
 
 /* Timeline-Container */
@@ -177,7 +188,11 @@ section {
     align-items: center;
     position: relative;
     gap: 50px; /* Abstand zwischen Items */
-    margin: 50px 0;
+    width: 75%; /* Timeline nimmt 75% der Bildschirmbreite ein */
+    margin: 50px auto; /* Zentrierung */
+    height: 300px; /* Fixe Höhe der Timeline */
+    box-sizing: border-box;
+    padding-top: 20px; /* Platz für den H1-Titel */
 }
 
 /* Der zentrale horizontale Strich */
@@ -188,7 +203,7 @@ section {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #4CAF50;
+    background-color: #FFCC00;
     z-index: 1;
 }
 
@@ -197,38 +212,55 @@ section {
     position: relative;
     text-align: center;
     z-index: 2; /* Über dem Strich */
+    width: 150px; /* Einheitliche Breite */
+    height: 100px; /* Einheitliche Höhe */
+    display: flex;
+    flex-direction: column; /* Text und Highlight in Spalten */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Verhindert Größenänderung bei Platzmangel */
 }
 
-/* Datum und Inhalt */
-.timeline-date {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #004B5A;
-}
-
+/* Inhalt der Box */
 .timeline-content {
-    background-color: #e8f5e9;
+    background-color: #004B5A;
+    color: white; /* Weißer Text */
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Text und Highlight in Spalten */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Box-Breite anpassen */
+    height: 100%; /* Box-Höhe anpassen */
+}
+
+/* Highlight-Text */
+.highlight-bold {
+    font-weight: bold; /* Fettgedruckt */
+    color: white; /* Weißer Text */
+    margin-top: 5px; /* Abstand nach oben */
+}
+
+/* Datum-Text */
+.timeline-date {
+    font-weight: bold;
+    color: #004B5A;
+    margin-bottom: 5px; /* Abstand unter dem Datum */
 }
 
 /* Oberhalb des Strichs */
 .timeline-top {
-    align-self: flex-start; /* Ausrichtung nach oben */
-    margin-bottom: 20px;
+    align-self: flex-start; /* Positionieren im oberen Bereich */
+    transform: translateY(-30px); /* Hebt die Box sauber über die Linie */
 }
 
 /* Unterhalb des Strichs */
 .timeline-bottom {
-    align-self: flex-end; /* Ausrichtung nach unten */
-    margin-top: 20px;
-}
-
-.highlight-bold {
-    font-weight: bold; /* Fettgedruckt */
-    display: block; /* Zeigt den Text in einer eigenen Zeile an */
-    margin-top: 5px; /* Optional: Abstand nach oben */
+    align-self: flex-end; /* Positionieren im unteren Bereich */
+    transform: translateY(30px); /* Senkt die Box sauber unter die Linie */
 }
 
 /* Container für Arbeitserfahrung */
@@ -269,6 +301,41 @@ section {
 .skill-box:hover {
     transform: scale(1.1); /* Vergrößert die Box leicht */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten beim Hover */
+}
+
+/* Hobbies */
+.music-player {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.music-player iframe {
+    border-radius: 10px; /* Optional: Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Schatteneffekt */
+}
+
+@media (max-width: 768px) {
+    .music-player iframe {
+        height: 300px; /* Reduziere die Höhe für kleine Bildschirme */
+    }
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #004B5A;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#scrollToTop:hover {
+    background-color: #FFCC00;
 }
 
 /* Footer */

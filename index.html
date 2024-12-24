@@ -33,7 +33,14 @@
         <section id="home">
             <div class="home-container">
                 <div class="about-text">
-                    <h1>Sali!</h1>
+                    <h1><span id="Begrüssung"></span>
+                        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                        <script>
+                          var typed = new Typed("#Begrüssung", {
+                            strings: ["Sali!", "Tschau!", "Hey!", "Salamander mitenander!"],
+                            typeSpeed: 60, backSpeed: 45, backDelay:3000, loop: true
+                          });
+                        </script></h1>
                     <p>Mein Name ist Olivier Knüsel. Mit Baujahr 1999 bin ich mittlerweile 25 Jahre alt. Aufgewachsen bin ich im idyllischen Messen im Solothurner Limpachtal, 
                         mittlerweile etwas weiter westlich in Grossaffoltern im Seeland wohnhaft. Beruflich bin ich als
                          <span class="highlight" data-tooltip="Business Analyse, Begleitung von HR-Vorhaben mit IT-Bezug, Schnittstelle zur Enterprise Architektur, technischer Support">HR IT-Spezialist</span>
@@ -63,30 +70,52 @@
 
         <!-- Arbeitserfahrung Section -->
         <section id="arbeitserfahrung">
-            <h1>Arbeitserfahrung</h1>
+            <h1>Arbeitserfahrung</h1> 
             <div class="arbeit-container">
                 <!-- Linkes Drittel: Timeline -->
-                <h3>Werdegang</h3>
                 <div class="timeline">
                     <div class="timeline-item timeline-top">
-                        <div class="timeline-date">2014 - 2018</div>
-                        <div class="timeline-content">Bilinguale Matur mit Schwerpunkt Wirtschaft & Recht an der Kantonsschule Solothurn</div>
+                        <div class="timeline-date">08/2014 - 07/2018</div>
+                        <div class="timeline-content">Bilinguale Matur mit Schwerpunkt Wirtschaft & Recht
+                            <span class="highlight-bold">Kantonsschule Solothurn</span>
+                        </div>
                     </div>
-                    <div class="timeline-item timeline-top">
-                        <div class="timeline-date">2021 - 2025</div>
-                        <div class="timeline-content">BSc Wirtschaftsinformatik an der Berner Fachhochschule</div>
-                    </div>
-                
                     <!-- Unterhalb des Strichs: Arbeitspositionen -->
                     <div class="timeline-item timeline-bottom">
-                        <div class="timeline-date">08/2018 - 08/2019</div>
-                        <div class="timeline-content">Praktikant Team Aus- und Weiterbildung<br>
+                        <div class="timeline-date">08/2018 - 07/2019</div>
+                        <div class="timeline-content">Praktikant Team Aus- und Weiterbildung
                             <span class="highlight-bold">PostFinance AG</span>
                         </div>
                     </div>
                     <div class="timeline-item timeline-bottom">
-                        <div class="timeline-date">2022 - 2024</div>
-                        <div class="timeline-content">Vorherige Position bei [Unternehmen]</div>
+                        <div class="timeline-date">08/2019 - 11/2019</div>
+                        <div class="timeline-content">Modulorganisator Team Aus- und Weiterbildung
+                            <span class="highlight-bold">PostFinance AG</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-bottom">
+                        <div class="timeline-date">12/2019 - 04/2022</div>
+                        <div class="timeline-content">Spezialist Collaboration Tools Team HR Governance
+                            <span class="highlight-bold">PostFinance AG</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-top">
+                        <div class="timeline-date">09/2021 - 07/2025</div>
+                        <div class="timeline-content">BSc Wirtschaftsinformatik
+                            <span class="highlight-bold">Berner Fachhochschule</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-bottom">
+                        <div class="timeline-date">05/2022 - 11/2022</div>
+                        <div class="timeline-content">Spezialist Collaboration Tools Stab Strategy & Transformation
+                            <span class="highlight-bold">PostFinance AG</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-bottom">
+                        <div class="timeline-date">12/2022 - </div>
+                        <div class="timeline-content">HR IT-Spezialist Team HR Digital
+                            <span class="highlight-bold">PostFinance AG</span>
+                        </div>
                     </div>
                 </div>
         
@@ -94,11 +123,12 @@
                 <div class="skills">
                     <h3>Fähigkeiten</h3>
                     <div class="skills-boxes">
-                        <div class="skill-box">Projektmanagement</div>
-                        <div class="skill-box">Teamführung</div>
-                        <div class="skill-box">IT-Strategie</div>
-                        <div class="skill-box">Kommunikation</div>
-                        <div class="skill-box">Problemlösung</div>
+                        <div class="skill-box">Agiles Projektmanagement</div>
+                        <div class="skill-box">Business Analyse</div>
+                        <div class="skill-box">Requirements Engineering</div>
+                        <div class="skill-box">Inhaltsvermittlung</div>
+                        <div class="skill-box">Lösungsfindung</div>
+                        <div class="skill-box">Englisch (C2-Zertifiziert)</div>
                     </div>
                 </div>
             </div>
@@ -117,8 +147,21 @@
         <section id="funfacts">
             <h2>Funfacts</h2>
             <p>Hier sind einige lustige Fakten über mich! [Platzhaltertext]</p>
+                <h3>Mein Sound</h3>
+                <div class="music-player">
+                    <!-- Apple Music Embed-Code -->
+                    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                    frameborder="0"
+                    height="450"
+                    style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                    src="https://embed.music.apple.com/ch/playlist/epic-edm/pl.u-Dx86TledZrX"></iframe>
+                </div>
+            </section>  
         </section>
     </main>
+    
+    <button id="scrollToTop" style="display: none;">Nach oben</button>
 
     <footer>
         <div class="footer-container">

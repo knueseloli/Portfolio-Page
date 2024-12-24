@@ -32,3 +32,19 @@ document.querySelectorAll('.home-box').forEach(box => {
         });
     });
 });
+
+const scrollToTopButton = document.getElementById('scrollToTop');
+
+// Zeigt den Button an, wenn der Benutzer nach unten scrollt
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+// Scrollt nach oben, wenn der Button geklickt wird
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
