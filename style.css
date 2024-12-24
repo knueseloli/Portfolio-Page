@@ -81,7 +81,7 @@ header {
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
-    height: 100vh;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
@@ -569,7 +569,7 @@ footer {
 }
 
 .mailto-button:hover {
-    background-color: #FFCC00; /* Dunkleres Blau beim Hover */
+    background-color: #007D8F; /* Dunkleres Blau beim Hover */
     transform: translateY(-3px);
 }
 
