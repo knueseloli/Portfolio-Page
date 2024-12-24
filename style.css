@@ -10,6 +10,15 @@ body {
     color: #333;
 }
 
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding-bottom: 50px;
+}
+
 /* Header fixieren */
 header {
     background-color: #004B5A;
@@ -62,17 +71,8 @@ header {
 }
 
 .header-nav li a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #FFCC00;
     transform: translateY(-2px); /* Leichte Bewegung beim Hover */
-}
-
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin: 20px 0;
 }
 
 /* Home Section */
@@ -172,14 +172,6 @@ section {
     object-fit: contain;
 }
 
-#home {
-    margin-bottom: 5px; /* Reduzierter Abstand unterhalb der Home Section */
-}
-
-#arbeitserfahrung {
-    margin-top: 5px; /* Optional: Reduzierter Abstand oberhalb der Arbeitserfahrung Section */
-}
-
 /* Timeline-Container */
 .timeline {
     display: flex;
@@ -193,6 +185,7 @@ section {
     height: 300px; /* Fixe Höhe der Timeline */
     box-sizing: border-box;
     padding-top: 20px; /* Platz für den H1-Titel */
+    padding-left: 50px;
 }
 
 /* Der zentrale horizontale Strich */
@@ -225,7 +218,7 @@ section {
 .timeline-content {
     background-color: #004B5A;
     color: white; /* Weißer Text */
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -268,11 +261,13 @@ section {
     display: flex;
     justify-content: space-between; /* Abstand zwischen Timeline und Fähigkeiten */
     gap: 20px;
+    align-items: top;
 }
 
 /* Fähigkeiten-Container */
 .skills {
     width: 30%; /* Rechtes Drittel */
+    text-align: center; /* Zentriert Text in der Box */
 }
 
 .skills h3 {
@@ -285,6 +280,7 @@ section {
     display: flex;
     flex-wrap: wrap; /* Mehrere Zeilen bei Platzmangel */
     gap: 10px; /* Abstand zwischen Boxen */
+    justify-content: flex-end;
 }
 
 .skill-box {
@@ -293,7 +289,7 @@ section {
     padding: 10px 15px;
     border-radius: 8px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -303,9 +299,162 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten beim Hover */
 }
 
-/* Hobbies */
+/* Allgemeine Stile für die Hobbies Section */
+
+a {
+    font-weight: bold;
+    color: #FFCC00;
+    cursor: pointer;
+    position: relative;
+}
+
+a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+    color: #FFCC00; /* Ändert die Farbe beim Hover */
+}
+
+.hobby-container {
+    display: flex;
+    flex-wrap: wrap; /* Mehrere Zeilen bei Platzmangel */
+    justify-content: center; /* Zentriert die Boxen */
+    gap: 20px; /* Abstand zwischen den Boxen */
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.hobby-box {
+    position: relative;
+    width: 200px; /* Breite der Boxen */
+    height: 200px; /* Höhe der Boxen */
+    border-radius: 50%; /* Runde Boxen */
+    background-color: #004B5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-box:hover {
+    background-color: #FFCC00;
+    transform: scale(1.1); /* Vergrößert die Box leicht beim Hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons in den Boxen */
+.hobby-box img {
+    width: 110%; /* Größe der Icons */
+    height: auto; /* Proportionales Skalieren */
+}
+
+/* Icon-Größe für Darts */
+.hobby-box img[alt="Darts Icon"] {
+    width: 50%;
+}
+
+/* Icon-Größe für Unihockey */
+.hobby-box img[alt="Unihockey Icon"] {
+    width: 50%;
+}
+
+/* Tooltip-Stil */
+.hobby-box::after {
+    content: attr(data-tooltip); /* Tooltip-Text aus dem Attribut */
+    position: absolute;
+    bottom: -40px; /* Unterhalb der Box anzeigen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #004B5A;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: pre; /* Erlaubt Zeilenumbruch */
+    opacity: 0; /* Unsichtbar standardmäßig */
+    visibility: hidden; /* Tooltip ist standardmäßig ausgeblendet */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Tooltip beim Hover anzeigen */
+.hobby-box:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Karte */
+.map-container {
+    display: flex;
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center; /* Zentriert vertikal */
+    margin: 20px auto; /* Automatische horizontale Zentrierung */
+    width: 100%; /* Füllt die verfügbare Breite */
+}
+
+.map {
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+}
+
+/* Iframes */
+.iframes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.iframes iframe {
+    border: none;
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+}
+
+/* Funfacts */
+/* Container für Funfacts */
+.funfacts-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Box für den Zähler */
+.counter-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #004B5A;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+    width: 200px; /* Feste Breite */
+    height: 300px; /* Gleiche Höhe wie der Music-Player */
+    text-align: center;
+    margin: 0;
+}
+
+.counter-box h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.counter-box p {
+    margin: 10px 0 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.counter-box:hover {
+    background-color: #FFCC00;
+    transform: scale(1.05);
+}
+
 .music-player {
-    margin: 20px auto;
+    margin: 0;
     text-align: center;
 }
 
@@ -318,6 +467,41 @@ section {
     .music-player iframe {
         height: 300px; /* Reduziere die Höhe für kleine Bildschirme */
     }
+}
+
+/* Box FCB Fan*/
+.fan-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #004B5A;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.fan-box p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.fan-box img {
+    width: 80%; /* Füllt die gesamte Breite der Box */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    object-fit: contain; /* Passt das Bild an die Box an */
+    margin: 0; /* Entfernt jeglichen Standardabstand */
+}
+
+.fan-box:hover {
+    background-color: #FFCC00;
+    transform: scale(1.05);
 }
 
 #scrollToTop {
@@ -385,7 +569,7 @@ footer {
 }
 
 .mailto-button:hover {
-    background-color: #005F6A; /* Dunkleres Blau beim Hover */
+    background-color: #FFCC00; /* Dunkleres Blau beim Hover */
     transform: translateY(-3px);
 }
 

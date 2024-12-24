@@ -33,6 +33,39 @@ document.querySelectorAll('.home-box').forEach(box => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const targetValue = 10.6; // Zielwert
+    const duration = 2000; // Zähldauer in Millisekunden
+    const interval = 10; // Zeit zwischen Updates in Millisekunden
+    const element = document.getElementById("leftHandedCount");
+
+    let currentValue = 0;
+    const increment = targetValue / (duration / interval);
+
+    const startCounter = () => {
+        const counter = setInterval(() => {
+            currentValue += increment;
+            if (currentValue >= targetValue) {
+                currentValue = targetValue; // Genau abschließen
+                clearInterval(counter);
+            }
+            element.textContent = currentValue.toFixed(1); // Zeigt eine Dezimalstelle an
+        }, interval);
+    };
+
+    // IntersectionObserver: Startet den Counter, wenn die Box sichtbar wird
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startCounter();
+                observer.disconnect(); // Beobachtung stoppen, nachdem der Counter gestartet ist
+            }
+        });
+    });
+
+    observer.observe(document.querySelector(".counter-box"));
+});
+
 const scrollToTopButton = document.getElementById('scrollToTop');
 
 // Zeigt den Button an, wenn der Benutzer nach unten scrollt
